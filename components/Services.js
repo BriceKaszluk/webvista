@@ -1,12 +1,12 @@
 import { FaCheck } from "react-icons/fa";
-import ButtonCta from "./ButtonCta";
+import ModalForQuote from "./ModalForQuote";
 import working from "../assets/working.jpg";
 import Image from "next/image";
 
 const Services = () => {
   return (
-    <section className="bg-section py-11 px-4 w-full border-t border-gray-200">
-      <div className="md:flex md:justify-center md:items-center">
+    <section id="services" className="bg-section py-11 px-4 w-full md:h-screen border-t border-gray-200 md:flex md:items-center md:items-center">
+      <div className="md:flex md:justify-center md:items-center md:items-center">
         <div className="md:w-2/4 md:flex md:justify-center md:items-center">
           <Image
             className="rounded-full shadow-sm shadow-white md:h-full shadow-lg"
@@ -61,7 +61,7 @@ const Services = () => {
               </p>
             </li>
           </ul>
-          <ButtonCta>Contactez-moi pour un devis personnalisé</ButtonCta>
+          <ModalForQuote title="Contactez-moi pour un devis personnalisé" />
         </div>
       </div>
     </section>

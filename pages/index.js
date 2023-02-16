@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ShowCaseBenefitsSection from "../components/ShowCaseBenefitsSection";
@@ -8,7 +7,7 @@ import AboutSection from "../components/AboutSection";
 import AboutNextSection from "../components/AboutNextSection";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
-import Modal from "../components/Modal";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -43,16 +42,16 @@ export default function Home() {
           key="index"
         />
       </Head>
-      <main className={styles.main}>
+      <main>
         <Navbar />
         <Hero />
-        <Modal />
         <ShowCaseBenefitsSection />
         <AboutSection />
         <Portfolio />
         <AboutNextSection />
         <NextJsBenefitsSection />
         <Services />
+        <Footer />
       </main>
     </>
   );

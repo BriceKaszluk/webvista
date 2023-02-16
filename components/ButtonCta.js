@@ -4,12 +4,11 @@ import { twMerge } from "tailwind-merge";
 function ButtonCta({ className, children, loading = false, ...props }) {
 
   return (
-    <div>
       <button
         type="button"
         disabled={loading}
         className={twMerge(
-          "bg-blue-500 hover:bg-blue-600 text-gray-200 font-bold py-2 px-4 rounded w-fit",
+          "bg-blue-500 hover:bg-blue-600 text-gray-200 font-bold py-2 px-4 rounded w-fit flex items-center justify-center",
           className
         )}
         {...props}
@@ -30,7 +29,6 @@ function ButtonCta({ className, children, loading = false, ...props }) {
         )}
         {children}
       </button>
-    </div>
   );
 }
 

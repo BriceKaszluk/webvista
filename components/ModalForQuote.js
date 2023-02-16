@@ -1,10 +1,16 @@
 import { Transition } from "@headlessui/react";
-import { Fragment, useId, useState } from "react";
+import { useState } from "react";
 import ButtonCta from "./ButtonCta";
 import Image from "next/image";
 import cross from "../assets/cross.png";
+import { FaCheck } from "react-icons/fa";
+import BackgroundLayer from "./ModalComponents/BackgroundLayer";
+import FadeIn from "./ModalComponents/FadeIn";
+import SlideOverLayer from "./ModalComponents/SlideOverLayer";
 
-function Modal() {
+function ModalForQuote({ title }) {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,37 +28,40 @@ function Modal() {
 
   const validateForm = () => {
     let isValid = true;
-  
+
     if (!fullName) {
       setFullNameError("Veuillez saisir votre nom et prénom");
       isValid = false;
     }
-  
+
     if (!email) {
       setEmailError("Veuillez saisir votre adresse e-mail");
       isValid = false;
     }
-  
+
     if (!projectType) {
       setProjectTypeError("Veuillez sélectionner le type de projet");
       isValid = false;
     }
-  
+
     if (!projectDescription) {
-      setProjectDescriptionError("Veuillez saisir une description détaillée du projet");
+      setProjectDescriptionError(
+        "Veuillez saisir une description détaillée du projet"
+      );
       isValid = false;
     }
-  
+
     return isValid;
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Valider le formulaire
     const isFormValid = validateForm();
-  
+
     // Si le formulaire est valide, envoyer les données
     if (isFormValid) {
+      setLoading(true);
       const formData = {
         fullName: fullName,
         email: email,
@@ -65,18 +74,19 @@ function Modal() {
       };
 
       // Appeler la fonction pour envoyer les données
-      fetch('/api/contact', {
-        method: 'POST',
+      fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       }).then((res) => {
-        console.log('Response received')
+        console.log("Response received");
         if (res.status === 200) {
-          console.log('Response succeeded!')
-          setSubmitted(true)
+          console.log("Response succeeded!");
+          setSubmitted(true);
+          setLoading(false);
           setFullName("");
           setEmail("");
           setPhone("");
@@ -85,16 +95,18 @@ function Modal() {
           setProjectDeadline("");
           setProjectDescription("");
           setAdditionalInfo("");
+        } else {
+          console.log("Response failed");
+          setLoading(false);
         }
-      })
+      });
     }
-  }
-  
+  };
 
   return (
     <div>
-      <div className="mx-auto my-16 flex max-w-md justify-start">
-        <ButtonCta onClick={() => setShow(!show)}>Register</ButtonCta>
+      <div className="mx-auto flex max-w-md justify-start">
+        <ButtonCta onClick={() => setShow(!show)}>{title}</ButtonCta>
       </div>
       <Transition.Root show={show}>
         <BackgroundLayer />
@@ -105,29 +117,33 @@ function Modal() {
             alt="Picture of the author"
             width={32}
             height={32}
-            onClick={() => setShow(false)}
+            onClick={() => {
+              setShow(false);
+              setSubmitted(false);
+            }}
           />
           <h2 className="text-3xl text-gray-200 font-bold mb-6 mt-11 text-left">
             Travaillons ensemble sur votre projet web
           </h2>
           <p className="text-lg text-gray-200 mb-6 text-left">
-            Saisissez l'opportunité d'avoir un site exceptionnel conçu par un
-            développeur passionné et déterminé à atteindre votre satisfaction.
+            Remplissez le formulaire ci-dessous, je vous recontacterai rapidement pour discuter de votre projet.
           </p>
           <div className="space-y-4">
             <form className="mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
               <FadeIn delay="delay-[300ms]">
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="full-name"
                     className="block text-gray-200 font-medium mb-2"
                   >
-                    Nom et prénom*
+                    Nom et prénom<span className="text-red-500">*</span>
                   </label>
                   <input
                     onChange={(e) => {
                       setFullName(e.target.value);
+                      setFullNameError("");
                     }}
+                    value={fullName}
                     type="text"
                     id="full-name"
                     name="full-name"
@@ -141,18 +157,20 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[350ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="email"
                     className="block text-gray-200 font-medium mb-2"
                   >
-                    Adresse e-mail*
+                    Adresse e-mail<span className="text-red-500">*</span>
                   </label>
                   <input
                     onChange={(e) => {
                       setEmail(e.target.value);
+                      setEmailError("");
                     }}
                     type="email"
+                    value={email}
                     id="email"
                     name="email"
                     className="w-full px-4 py-2 leading-tight border rounded-lg shadow appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 dark:bg-gray-800 dark:border-gray-600 dark:focus:shadow-outline-gray"
@@ -165,7 +183,7 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[400ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="phone"
                     className="block text-gray-200 font-medium mb-2"
@@ -176,6 +194,7 @@ function Modal() {
                     onChange={(e) => {
                       setPhone(e.target.value);
                     }}
+                    value={phone}
                     type="tel"
                     id="phone"
                     name="phone"
@@ -185,17 +204,19 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[450ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="project-type"
                     className="block text-gray-200 font-medium mb-2"
                   >
-                    Type de projet*
+                    Type de projet<span className="text-red-500">*</span>
                   </label>
                   <select
                     onChange={(e) => {
                       setProjectType(e.target.value);
+                      setProjectTypeError("");
                     }}
+                    value={projectType}
                     id="project-type"
                     name="project-type"
                     className="w-full px-4 py-2 leading-tight border rounded-lg shadow appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 dark:bg-gray-800 dark:border-gray-600 dark:focus:shadow-outline-gray"
@@ -216,7 +237,7 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[500ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="project-budget"
                     className="block text-gray-200 font-medium mb-2"
@@ -227,6 +248,7 @@ function Modal() {
                     onChange={(e) => {
                       setProjectBudget(e.target.value);
                     }}
+                    value={projectBudget}
                     type="text"
                     id="project-budget"
                     name="project-budget"
@@ -236,7 +258,7 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[550ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="project-deadline"
                     className="block text-gray-200 font-medium mb-2"
@@ -247,6 +269,7 @@ function Modal() {
                     onChange={(e) => {
                       setProjectDeadline(e.target.value);
                     }}
+                    value={projectDeadline}
                     type="text"
                     id="project-deadline"
                     name="project-deadline"
@@ -256,17 +279,19 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[600ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="project-description"
                     className="block text-gray-200 font-medium mb-2"
                   >
-                    Description du projet*
+                    Description du projet<span className="text-red-500">*</span>
                   </label>
                   <textarea
                     onChange={(e) => {
                       setProjectDescription(e.target.value);
+                      setProjectDescriptionError("");
                     }}
+                    value={projectDescription}
                     id="project-description"
                     name="project-description"
                     className="w-full px-4 py-2 leading-tight border rounded-lg shadow appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 dark:bg-gray-800 dark:border-gray-600 dark:focus:shadow-outline-gray"
@@ -282,7 +307,7 @@ function Modal() {
               </FadeIn>
               <FadeIn delay="delay-[650ms]">
                 {" "}
-                <div className="">
+                <div className="text-left">
                   <label
                     htmlFor="additional-info"
                     className="block text-gray-200 font-medium mb-2"
@@ -293,6 +318,7 @@ function Modal() {
                     onChange={(e) => {
                       setAdditionalInfo(e.target.value);
                     }}
+                    value={additionalInfo}
                     id="additional-info"
                     name="additional-info"
                     className="w-full px-4 py-2 leading-tight border rounded-lg shadow appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 dark:bg-gray-800 dark:border-gray-600 dark:focus:shadow-outline-gray"
@@ -305,13 +331,20 @@ function Modal() {
             </form>
           </div>
           <div className="my-6">
-            <FadeIn delay="delay-[700ms]">
-              <div className="flex justify-end md:block">
-                <ButtonCta onClick={(e) => handleSubmit(e)}>
-                  Envoyer ma demande
-                </ButtonCta>
+            {submitted ? (
+              <div className="flex items-center justify-center">
+                <FaCheck className="text-green-500 animate-pulse mr-2" />
+                <p>Votre demande a été envoyé avec succès !</p>
               </div>
-            </FadeIn>
+            ) : (
+              <FadeIn delay="delay-[700ms]">
+                <div className="mr-auto w-fit">
+                  <ButtonCta loading={loading} onClick={(e) => handleSubmit(e)}>
+                    Envoyer ma demande
+                  </ButtonCta>
+                </div>
+              </FadeIn>
+            )}
           </div>
         </SlideOverLayer>
       </Transition.Root>
@@ -319,54 +352,4 @@ function Modal() {
   );
 }
 
-const BackgroundLayer = () => (
-  <Transition.Child
-    enter="transition-opacity ease-in-out duration-500"
-    enterFrom="opacity-0"
-    enterTo="opacity-100"
-    leave="transition-opacity ease-in-out duration-500"
-    leaveFrom="opacity-100"
-    leaveTo="opacity-0"
-  >
-    <div className="fixed inset-0 bg-gray-500 opacity-75" />
-  </Transition.Child>
-);
-
-const SlideOverLayer = ({ children }) => (
-  <Transition.Child
-    as={Fragment}
-    enter="transform transition ease-in-out duration-500"
-    enterFrom="translate-x-full"
-    enterTo="translate-x-0"
-    leave="transform transition ease-in-out duration-500 delay-100"
-    leaveFrom="translate-x-0"
-    leaveTo="translate-x-full"
-  >
-    <div className="fixed inset-0 overflow-hidden z-30">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-          <div className="pointer-events-auto w-screen max-w-2xl">
-            <div className="flex h-full flex-col overflow-y-scroll bg-modal py-6 shadow-xl">
-              <div className="px-4 sm:px-6">{children}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Transition.Child>
-);
-
-const FadeIn = ({ delay, children }) => (
-  <Transition.Child
-    enter={`transition-all ease-in-out duration-700 ${delay}`}
-    enterFrom="opacity-0 translate-y-6"
-    enterTo="opacity-100 translate-y-0"
-    leave="transition-all ease-in-out duration-300"
-    leaveFrom="opacity-100"
-    leaveTo="opacity-0"
-  >
-    {children}
-  </Transition.Child>
-);
-
-export default Modal;
+export default ModalForQuote;

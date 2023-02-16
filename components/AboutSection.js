@@ -3,12 +3,12 @@ import myPicture from "../assets/brice-photo.png";
 
 function AboutSection() {
   return (
-    <div className="w-full bg-section border-t border-b border-gray-200 py-11">
+    <div id="about" className="w-full bg-section border-t border-b border-gray-200 py-11">
       <div className="max-w-7xl mx-auto md:mt-16 flex flex-col lg:flex-row items-center justify-center px-4 md:h-screen">
         <div className="lg:w-1/2 lg:pr-16 h-2/3 flex flex-col justify-center items-center md:items-start h-5/6">
           <div className="lg:w-1/2 w-2/3 md:mb-0 flex items-center justify-center md:hidden">
             <Image
-              className="rounded-full shadow-sm shadow-white"
+              className="rounded-full shadow-sm shadow-white md:h-full shadow-lg"
               src={myPicture}
               alt="Picture of the author"
               width={400}
@@ -16,7 +16,7 @@ function AboutSection() {
             />
           </div>
           <h2 className="mt-11 md:mb-11 md:mt-0 text-3xl font-bold text-gray-200 text-shadow mb-5 md:mb-0 mr-auto">
-            À propos de moi
+          Qui se cache derrière l'écran ?
           </h2>
 
           <div>

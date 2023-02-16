@@ -46,14 +46,14 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section className="bg-gray-100 py-20 px-4 w-full bg-interSection">
+    <section id="projects" className="bg-gray-100 py-11 px-4 w-full bg-interSection">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-3xl font-bold text-left md:text-center mb-8">Portfolio</h2>
+        <h2 className="text-3xl font-bold text-left md:text-center mb-8">Exemples de projets</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-fit mb-4 z-10">
                 <Image
@@ -66,13 +66,13 @@ const Portfolio = () => {
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-800">{project.title}</h3>
               <p className="text-gray-800 text-base mb-2">{project.description}</p>
-              <p className="text-gray-800 text-base mb-2">Caractéristiques:</p>
+              <p className="text-gray-800 text-base mb-2 font-bold">Caractéristiques:</p>
               <ul className="list-disc ml-6 mb-2 text-gray-800">
                 {project.caracteristics.map((caracteristic, index) => (
                   <li key={index}>{caracteristic}</li>
                 ))}
               </ul>
-              <p className="text-gray-800 text-base mb-2">
+              <p className="text-gray-800 text-base mb-2 font-bold">
                 Technologies utilisées:
               </p>
               <ul className="list-disc ml-6 text-gray-800">
