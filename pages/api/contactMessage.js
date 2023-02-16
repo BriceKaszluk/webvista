@@ -4,11 +4,11 @@ export default async function sendEmail(req, res) {
   // ... valider les données du formulaire et envoyer l'email
   try {
     const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY)
 
     const message = {
-      to: process.env.SENDGRID_SENDER,
-      from: process.env.SENDGRID_SENDER,
+      to: process.env.NEXT_PUBLIC_SENDGRID_SENDER,
+      from: process.env.NEXT_PUBLIC_SENDGRID_SENDER,
       subject: `Nouveau message de ${fullName}`,
       text: `Nouveau message de ${fullName} (${email}), son message: ${mess}`,
       html: `
