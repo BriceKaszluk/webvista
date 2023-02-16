@@ -21,11 +21,8 @@ export default function Home() {
         <link rel="canonical" href="https://webvista.fr/" key="index" />
         <meta charSet="UTF-8" id="iq5ty" key="index" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" key="index" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1"
-          key="index"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</meta>
         <meta
           name="description"
           content="Faites confiance à un développeur freelance expérimenté pour créer un site web professionnel qui répond à vos besoins. Contactez-moi dès maintenant."
