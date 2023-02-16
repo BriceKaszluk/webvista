@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styles from "@/styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ShowCaseBenefitsSection from "../components/ShowCaseBenefitsSection";
@@ -42,7 +43,7 @@ export default function Home() {
           key="index"
         />
       </Head>
-      <main>
+      <main className={styles.main}>
         <Navbar />
         <Hero />
         <ShowCaseBenefitsSection />
