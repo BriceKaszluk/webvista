@@ -201,7 +201,7 @@ function ModalForQuote({ className }) {
             {submitted ? (
               <div className="flex items-center justify-center">
                 <FaCheck className="text-green-500 animate-pulse mr-2" />
-                <p>Votre demande a été envoyé avec succès !</p>
+                <p className="text-gray-200">Votre demande a été envoyé avec succès !</p>
               </div>
             ) : (
               <FadeIn delay="delay-[700ms]">
