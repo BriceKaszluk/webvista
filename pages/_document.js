@@ -18,6 +18,7 @@ export default function Document() {
         content="Faites confiance à un développeur freelance expérimenté pour créer un site web professionnel qui répond à vos besoins. Contactez-moi dès maintenant."
         key="index"
       />
+      <meta name="brand" content="WebVista" />
       <meta
         name="keywords"
         content="création de site web, développeur freelance, site vitrine, site professionnel, développement web"
@@ -27,7 +28,7 @@ export default function Document() {
       <meta
         name="image"
         property="og:image"
-        content="/assets/og-image.png"
+        content="https://www.webvista.fr/assets/og-image.png"
         key="index"
       />
       <meta property="og:image:width" content="1650" />
