@@ -1,6 +1,5 @@
 import Image from "next/image";
-import nextPicture from "../public/assets/what-next.png";
-import ButtonCta from "./ButtonCta";
+import nextPicture from "../public/assets/what-next.webp";
 
 function AboutNextSection() {
   return (

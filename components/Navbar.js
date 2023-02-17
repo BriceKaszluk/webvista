@@ -1,6 +1,6 @@
 import ModalForContact from "./ModalForContact";
 import SocialLink from "./SocialLink";
-import linkedinIcon from "../public/assets/linkedin.png";
+import linkedinIcon from "../public/assets/linkedin.webp";
 
 function Navbar() {
   function scrollToElement(id) {

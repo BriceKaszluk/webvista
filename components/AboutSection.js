@@ -1,7 +1,7 @@
 import Image from "next/image";
-import myPicture from "../public/assets/brice-photo.png";
+import myPicture from "../public/assets/brice-photo.webp";
 import SocialLink from "./SocialLink";
-import linkedinIcon from "../public/assets/linkedin.png";
+import linkedinIcon from "../public/assets/linkedin.webp";
 
 function AboutSection() {
   return (

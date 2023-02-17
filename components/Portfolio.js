@@ -1,8 +1,8 @@
 import Image from "next/image";
-import climatApp from "../public/assets/climatApp.png";
-import weneedlove from "../public/assets/weneedlove.png";
-import climatApp2 from "../public/assets/climatApp2.png";
-import weneedlove2 from "../public/assets/weneedlove2.png";
+import climatApp from "../public/assets/climatApp.webp";
+import weneedlove from "../public/assets/weneedlove.webp";
+import climatApp2 from "../public/assets/climatApp2.webp";
+import weneedlove2 from "../public/assets/weneedlove2.webp";
 import Link from "next/link";
 import ButtonCta from "./ButtonCta";
 

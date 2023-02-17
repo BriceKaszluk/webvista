@@ -13,8 +13,8 @@ module.exports = {
     extend: {
       variants: { translate: ['group-hover'] },
       backgroundImage: {
-        'main': "url('https://cdn.pixabay.com/photo/2017/08/23/11/30/background-2672565_960_720.jpg')",
-        'myPicture': "url('../public/assets/brice-photo.png')",
+        'main': "url('../public/assets/main-background.webp')",
+        'myPicture': "url('../public/assets/brice-photo.webp')",
       },
       colors: {
         'section': '#002D62',

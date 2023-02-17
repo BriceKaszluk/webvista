@@ -1,12 +1,15 @@
 import Card from "./Card";
 import InterSection from "./InterSection";
+import nextIcon1 from "../public/assets/nextjs-benefits-1.webp";
+import nextIcon2 from "../public/assets/nextjs-benefits-2.webp";
+import nextIcon3 from "../public/assets/nextjs-benefits-3.webp";
 
 const NextJsBenefitsSection = () => {
   return (
     <div className="w-full bg-interSection md:h-screen/2 flex items-center justify-evenly flex-col py-11">
       <h2 className="text-3xl font-bold text-gray-200 text-shadow text-center mb-11">Comment Next.js peut vous aider à gagner du temps et de l'argent  ?</h2>
           <InterSection>
-      <Card img="https://cdn-icons-png.flaticon.com/128/1531/1531130.png">
+      <Card img={nextIcon1}>
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Performances
@@ -15,7 +18,7 @@ const NextJsBenefitsSection = () => {
         Next.js utilise la technologie du rendu côté serveur pour améliorer les performances de votre site web, ce qui entraîne une meilleure expérience utilisateur et une augmentation du temps passé sur le site.
         </p>
       </Card>
-      <Card img="https://cdn-icons-png.flaticon.com/128/8187/8187898.png">
+      <Card img={nextIcon2}>
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Évolution
@@ -24,7 +27,7 @@ const NextJsBenefitsSection = () => {
         Une architecture modulaire qui permet d' ajouter des fonctionnalités à mesure que vos besoins évoluent, ce qui peut vous faire gagner du temps et de l'argent à long terme. 
         </p>
       </Card>
-      <Card img="https://cdn-icons-png.flaticon.com/128/1199/1199429.png">
+      <Card img={nextIcon3}>
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Référencement

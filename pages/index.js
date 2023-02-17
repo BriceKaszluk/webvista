@@ -21,7 +21,7 @@ export default function Home() {
         <meta
           name="image"
           property="og:image"
-          content="https://www.webvista.fr/assets/og-image.png"
+          content="https://www.webvista.fr/assets/og-image.webp"
           key="index"
         />
         <meta property="og:image:width" content="1650" />
