@@ -36,7 +36,7 @@ export default function Home() {
         <meta name="robots" content="index, follow" key="index" />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/webvista-sm1d.appspot.com/o/og.png?alt=media&token=8564d6d1-8495-45db-a414-c7972be4c328"
+          content="../assets/og-image.png"
           key="index"
         />
       </Head>
