@@ -21,7 +21,7 @@ function AboutSection() {
           <h2 className="  text-3xl font-bold text-gray-200 text-shadow ">
           Qui se cache derrière l'écran ?
           </h2>
-          <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk/" className="bg-white rounded-md ml-8 w-11 h-11 mr-11" />
+          <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk?original_referer=" className="bg-white rounded-md ml-8 w-11 h-11 mr-11" />
           </div>
 
 

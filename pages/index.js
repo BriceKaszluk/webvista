@@ -14,9 +14,10 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>
-        Création de sites web évolutifs pour les particuliers et les entreprises
-      </title>
+        <title>
+          Création de sites web évolutifs pour les particuliers et les
+          entreprises
+        </title>
         <meta
           name="image"
           property="og:image"
@@ -25,6 +26,13 @@ export default function Home() {
         />
         <meta property="og:image:width" content="1650" />
         <meta property="og:image:height" content="798" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://webvista.fr/" />
+        <meta
+          property="og:description"
+          content="Faites confiance à un développeur freelance expérimenté pour créer un site web professionnel qui répond à vos besoins. Contactez-moi dès maintenant."
+        />
+        <meta property="og:site_name" content="WebVista" />
       </Head>
       <main className={styles.main}>
         <Navbar />

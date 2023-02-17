@@ -7,7 +7,7 @@ function Card({ img, children }) {
             decoding="async"
             loading="lazy"
             src={img}
-            alt="icon benefits"
+            alt="image benefits"
             width="48"
             height="48"
             className="mx-auto"

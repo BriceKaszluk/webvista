@@ -30,6 +30,15 @@ export default function Document() {
       />
       <meta property="og:image:width" content="1650" />
       <meta property="og:image:height" content="798" />
+      <meta property="og:title" content="Le titre de ma page" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://webvista.fr/" />
+      <meta
+        property="og:description"
+        content="Faites confiance à un développeur freelance expérimenté pour créer un site web professionnel qui répond à vos besoins. Contactez-moi dès maintenant."
+      />
+      <meta property="og:site_name" content="WebVista" />
+
       <Head />
       <body>
         <Main />

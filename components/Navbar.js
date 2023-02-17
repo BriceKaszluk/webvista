@@ -50,7 +50,7 @@ function Navbar() {
             </div>
           </button>
           <ModalForContact />
-          <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk/" />
+          <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk?original_referer=" />
         </div>
       </div>
     </nav>
