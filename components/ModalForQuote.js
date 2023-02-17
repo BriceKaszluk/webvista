@@ -114,7 +114,7 @@ function ModalForQuote({ title }) {
           <Image
             src={cross}
             className="cursor-pointer text-white"
-            alt="Picture of the author"
+            alt="Cross icon"
             width={32}
             height={32}
             onClick={() => {

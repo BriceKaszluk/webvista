@@ -11,7 +11,7 @@ const Services = () => {
           <Image
             className="rounded-full shadow-sm shadow-white md:h-full shadow-lg"
             src={working}
-            alt="Picture of the author"
+            alt="working on desktop"
             width={800}
             height={800}
           />
