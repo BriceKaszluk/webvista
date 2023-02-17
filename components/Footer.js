@@ -1,4 +1,6 @@
 import ModalForContact from "./ModalForContact";
+import SocialLink from "./SocialLink";
+import linkedinIcon from "../public/assets/linkedin.png";
 
 function Footer() {
   function scrollToElement(id) {
@@ -62,8 +64,9 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-full md:w-1/3 lg:w-1/4">
+          <div className="w-full md:w-1/3 lg:w-1/4 flex items-end md:items-center">
             <ModalForContact className="border border-gray-400 rounded-md text-gray-100 px-4 py-2 transition duration-500 ease-in-out hover:bg-blue-500  hover:text-white focus:outline-none" />
+            <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk/" className="rounded-md bg-white ml-8 w-11 h-11" />
           </div>
         </div>
         <hr className="my-8 border-gray-700" />

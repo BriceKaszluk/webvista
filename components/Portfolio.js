@@ -76,7 +76,7 @@ const Portfolio = () => {
                   height={270}
                   className="rounded-lg shadow-lg"
                 />
-                                <Image
+                <Image
                   src={project.secondImage}
                   alt={project.title}
                   width={558}
@@ -108,7 +108,12 @@ const Portfolio = () => {
                     <li key={index}>{tehcnologie}</li>
                   ))}
                 </ul>
-                <Link href={project.link} target="_blank" rel="noopener noreferrer" className="w-full block mt-8">
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block mt-8"
+                >
                   <ButtonCta className="text-white ml-auto md:ml-0">
                     Voir le projet
                   </ButtonCta>

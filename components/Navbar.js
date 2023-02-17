@@ -1,4 +1,6 @@
 import ModalForContact from "./ModalForContact";
+import SocialLink from "./SocialLink";
+import linkedinIcon from "../public/assets/linkedin.png";
 
 function Navbar() {
   function scrollToElement(id) {
@@ -48,6 +50,7 @@ function Navbar() {
             </div>
           </button>
           <ModalForContact />
+          <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk/" />
         </div>
       </div>
     </nav>

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import myPicture from "../public/assets/brice-photo.png";
+import SocialLink from "./SocialLink";
+import linkedinIcon from "../public/assets/linkedin.png";
 
 function AboutSection() {
   return (
@@ -15,9 +17,13 @@ function AboutSection() {
               height={400}
             />
           </div>
-          <h2 className="mt-11 md:mb-11 md:mt-0 text-3xl font-bold text-gray-200 text-shadow mb-5 md:mb-0 mr-auto">
+          <div className="flex justify-center items-end md:items-center mt-11 md:mb-11 md:mt-0 mb-5 md:mb-0 mr-auto">
+          <h2 className="  text-3xl font-bold text-gray-200 text-shadow ">
           Qui se cache derrière l'écran ?
           </h2>
+          <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk/" className="bg-white rounded-md ml-8 w-11 h-11 mr-11" />
+          </div>
+
 
           <div>
             <p className="text-lg text-gray-200">
