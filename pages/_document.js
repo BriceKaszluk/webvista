@@ -27,9 +27,11 @@ export default function Document() {
       <meta
         name="image"
         property="og:image"
-        content="../assets/og-image.png"
+        content="/assets/og-image.png"
         key="index"
       />
+      <meta property="og:image:width" content="1650" />
+<meta property="og:image:height" content="798" />
       <Head />
       <body>
         <Main />
