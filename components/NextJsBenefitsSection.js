@@ -9,7 +9,7 @@ const NextJsBenefitsSection = () => {
     <div className="w-full bg-interSection md:h-screen/2 flex items-center justify-evenly flex-col py-11">
       <h2 className="text-3xl font-bold text-gray-200 text-shadow text-center mb-11">Comment Next.js peut vous aider à gagner du temps et de l'argent  ?</h2>
           <InterSection>
-      <Card img={nextIcon1}>
+      <Card img={nextIcon1} alt="a speedometer">
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Performances
@@ -18,7 +18,7 @@ const NextJsBenefitsSection = () => {
         Next.js utilise la technologie du rendu côté serveur pour améliorer les performances de votre site web, ce qui entraîne une meilleure expérience utilisateur et une augmentation du temps passé sur le site.
         </p>
       </Card>
-      <Card img={nextIcon2}>
+      <Card img={nextIcon2} alt="three arrows pointing up">
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Évolution
@@ -27,7 +27,7 @@ const NextJsBenefitsSection = () => {
         Une architecture modulaire qui permet d' ajouter des fonctionnalités à mesure que vos besoins évoluent, ce qui peut vous faire gagner du temps et de l'argent à long terme. 
         </p>
       </Card>
-      <Card img={nextIcon3}>
+      <Card img={nextIcon3} alt="magnifying glass with google logo">
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Référencement

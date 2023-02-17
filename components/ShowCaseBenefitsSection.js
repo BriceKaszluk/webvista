@@ -9,7 +9,7 @@ const ShowCaseBenefitsSection = () => {
     <div className="w-full bg-interSection md:h-screen/2 flex items-center justify-evenly flex-col py-11">
       <h2 className="text-3xl font-bold text-gray-200 text-shadow text-center mb-11">Pourquoi avoir un site web vitrine ?</h2>
           <InterSection>
-      <Card img={showcaseIcon1}>
+      <Card img={showcaseIcon1} alt="heaps of coins">
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
           Opportunités de vente supplémentaires
@@ -20,7 +20,7 @@ const ShowCaseBenefitsSection = () => {
           de vente.
         </p>
       </Card>
-      <Card img={showcaseIcon2}>
+      <Card img={showcaseIcon2} alt="an eye">
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
           Visibilité<br></br> en ligne
@@ -30,7 +30,7 @@ const ShowCaseBenefitsSection = () => {
           de nouveaux clients potentiels et d'augmenter votre visibilité.
         </p>
       </Card>
-      <Card img={showcaseIcon3}>
+      <Card img={showcaseIcon3} alt="a validated green shield">
         {" "}
         <h3 className="text-xl font-bold text-gray-800 mb-4">
           Meilleure gestion de votre image de marque
