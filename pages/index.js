@@ -13,7 +13,16 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-
+      <Head>
+      <meta
+        name="image"
+        property="og:image"
+        content="https://www.webvista.fr/assets/og-image.png"
+        key="index"
+      />
+      <meta property="og:image:width" content="1650" />
+      <meta property="og:image:height" content="798" />
+      </Head>
       <main className={styles.main}>
         <Navbar />
         <Hero />
