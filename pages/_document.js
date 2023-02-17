@@ -3,9 +3,6 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <title>
-        Création de sites web évolutifs pour les particuliers et les entreprises
-      </title>
       <link rel="canonical" href="https://webvista.fr/" key="index" />
       <meta charSet="UTF-8" id="iq5ty" key="index" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" key="index" />

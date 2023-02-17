@@ -14,6 +14,9 @@ export default function Home() {
   return (
     <>
       <Head>
+      <title>
+        Création de sites web évolutifs pour les particuliers et les entreprises
+      </title>
         <meta
           name="image"
           property="og:image"

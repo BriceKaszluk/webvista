@@ -83,7 +83,7 @@ function ModalForQuote({ className }) {
   };
 
   return (
-    <div>
+    <div className="flex justify-end items-end">
       <div className="mx-auto flex max-w-md justify-start">
         <div
           className={twMerge(

@@ -21,7 +21,7 @@ function Navbar() {
         >
           WebVista
         </div>
-        <div className="flex space-x-4 hidden sm:flex">
+        <div className="flex space-x-4 hidden sm:flex sm:items-end">
           <button
             onClick={() => {
               scrollToElement("about");
