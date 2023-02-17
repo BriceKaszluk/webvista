@@ -14,7 +14,7 @@ module.exports = {
       variants: { translate: ['group-hover'] },
       backgroundImage: {
         'main': "url('https://cdn.pixabay.com/photo/2017/08/23/11/30/background-2672565_960_720.jpg')",
-        'myPicture': "url('../assets/brice-photo.png')",
+        'myPicture': "url('../public/assets/brice-photo.png')",
       },
       colors: {
         'section': '#002D62',

@@ -31,7 +31,7 @@ export default function Document() {
         key="index"
       />
       <meta property="og:image:width" content="1650" />
-<meta property="og:image:height" content="798" />
+      <meta property="og:image:height" content="798" />
       <Head />
       <body>
         <Main />

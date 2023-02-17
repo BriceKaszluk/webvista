@@ -2,7 +2,7 @@ import { Transition } from "@headlessui/react";
 import { useState } from "react";
 import ButtonCta from "./ButtonCta";
 import Image from "next/image";
-import cross from "../assets/cross.png";
+import cross from "../public/assets/cross.png";
 import { FaCheck } from "react-icons/fa";
 import BackgroundLayer from "./ModalComponents/BackgroundLayer";
 import FadeIn from "./ModalComponents/FadeIn";

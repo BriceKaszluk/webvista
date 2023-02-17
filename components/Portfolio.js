@@ -1,6 +1,6 @@
 import Image from "next/image";
-import climatApp from "../assets/climatApp.png";
-import weneedlove from "../assets/weneedlove.png";
+import climatApp from "../public/assets/climatApp.png";
+import weneedlove from "../public/assets/weneedlove.png";
 
 const projects = [
   {

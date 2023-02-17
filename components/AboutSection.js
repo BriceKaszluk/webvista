@@ -1,5 +1,5 @@
 import Image from "next/image";
-import myPicture from "../assets/brice-photo.png";
+import myPicture from "../public/assets/brice-photo.png";
 
 function AboutSection() {
   return (

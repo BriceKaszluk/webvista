@@ -1,6 +1,6 @@
 import { FaCheck } from "react-icons/fa";
 import ModalForQuote from "./ModalForQuote";
-import working from "../assets/working.jpg";
+import working from "../public/assets/working.jpg";
 import Image from "next/image";
 
 const Services = () => {
