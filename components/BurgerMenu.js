@@ -50,7 +50,7 @@ function ModalForQuote({ className }) {
           />
           <nav className="flex justify-center mt-11 h-screen/2">
             <div className="flex flex-col justify-between w-8/12 ">
-              <div className="flex flex-col items-center justify-between h-screen/3 w-full space-x-4">
+              <div className="text-gray-200 flex flex-col items-center justify-between h-screen/3 w-full space-x-4">
                   <button
                     onClick={() => {
                       setShowModal(!showModal);
@@ -81,7 +81,7 @@ function ModalForQuote({ className }) {
                       Services
                     </div>
                   </button>
-                  <ModalForContact className="text-3xl font-bold text-gray-200 text-shadow" />
+                  <ModalForContact className="text-3xl font-bold text-gray-200 hover:text-gray-100 text-shadow" />
                   <SocialLink
                     image={linkedinIcon}
                     link="https://www.linkedin.com/in/bricekaszluk?original_referer="

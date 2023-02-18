@@ -65,7 +65,7 @@ function Footer() {
             </div>
           </div>
           <div className="w-full md:w-1/3 lg:w-1/4 flex items-end md:items-center">
-            <ModalForContact className="border border-gray-400 rounded-md text-gray-100 px-4 py-2 transition duration-500 ease-in-out hover:bg-blue-500  hover:text-white focus:outline-none" />
+            <ModalForContact className="border border-gray-400 rounded-md text-gray-200 px-4 py-2 transition duration-500 ease-in-out hover:bg-blue-500  hover:text-white focus:outline-none" />
             <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk?original_referer=" className="rounded-md bg-white ml-8 w-11 h-11" />
           </div>
         </div>
