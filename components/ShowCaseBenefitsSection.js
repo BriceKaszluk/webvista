@@ -14,7 +14,7 @@ const ShowCaseBenefitsSection = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">
           Opportunités de vente supplémentaires
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
           Votre site web vitrine peut être utilisé pour vendre vos produits ou
           services en ligne, ce qui vous donne accès à de nouvelles opportunités
           de vente.
@@ -25,7 +25,7 @@ const ShowCaseBenefitsSection = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">
           Visibilité<br></br> en ligne
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
           Avoir un site web vitrine vous permet de vous faire connaître auprès
           de nouveaux clients potentiels et d'augmenter votre visibilité.
         </p>
@@ -35,7 +35,7 @@ const ShowCaseBenefitsSection = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">
           Meilleure gestion de votre image de marque
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
           En contrôlant ce que les autres voient sur votre site web vitrine,
           vous pouvez renforcer votre image globale et influencer la façon dont
           ils perçoivent votre marque.

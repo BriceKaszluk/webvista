@@ -14,7 +14,7 @@ const NextJsBenefitsSection = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Performances
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
         Next.js utilise la technologie du rendu côté serveur pour améliorer les performances de votre site web, ce qui entraîne une meilleure expérience utilisateur et une augmentation du temps passé sur le site.
         </p>
       </Card>
@@ -23,7 +23,7 @@ const NextJsBenefitsSection = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Évolution
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
         Une architecture modulaire qui permet d' ajouter des fonctionnalités à mesure que vos besoins évoluent, ce qui peut vous faire gagner du temps et de l'argent à long terme. 
         </p>
       </Card>
@@ -32,7 +32,7 @@ const NextJsBenefitsSection = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">
         Référencement
         </h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
         Next.js est conçu pour offrir un référencement optimal , ce qui peut aider votre site web à être plus facilement trouvé par les moteurs de recherche et à attirer plus de trafic organique.
         </p>
       </Card>
