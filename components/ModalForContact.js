@@ -87,7 +87,7 @@ function ModalForQuote({ className }) {
       <div className="mx-auto flex max-w-md justify-start">
         <div
           className={twMerge(
-            "text-xl text-gray-800 hover:text-gray-800 cursor-pointer",
+            "text-xl text-gray-800 hover:text-gray-700 cursor-pointer",
             className
           )}
           onClick={() => setShow(!show)}

@@ -51,43 +51,42 @@ function ModalForQuote({ className }) {
           <nav className="flex justify-center mt-11 h-screen/2">
             <div className="flex flex-col justify-between w-8/12 ">
               <div className="flex flex-col items-center justify-between h-screen/3 w-full space-x-4">
-                <button
-                  onClick={() => {
-                    setShowModal(!showModal);
-                    scrollToElement("about");
-                  }}
-                >
-                  <div className="text-3xl font-bold text-gray-200 text-shadow">
-                    À propos
-                  </div>
-                </button>
-                <button
-                  onClick={() => {
-                    setShowModal(!showModal);
-                    scrollToElement("projects");
-                  }}
-                >
-                  <div className="text-3xl font-bold text-gray-200 text-shadow">
-                    Projets
-                  </div>
-                </button>
-                <button
-                  onClick={() => {
-                    setShowModal(!showModal);
-                    scrollToElement("services");
-                  }}
-                >
-                  <div className="text-3xl font-bold text-gray-200 text-shadow">
-                    Services
-                  </div>
-                </button>
-                <div>
+                  <button
+                    onClick={() => {
+                      setShowModal(!showModal);
+                      scrollToElement("about");
+                    }}
+                  >
+                    <div className="text-3xl font-bold text-gray-200 text-shadow">
+                      À propos
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowModal(!showModal);
+                      scrollToElement("projects");
+                    }}
+                  >
+                    <div className="text-3xl font-bold text-gray-200 text-shadow">
+                      Projets
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowModal(!showModal);
+                      scrollToElement("services");
+                    }}
+                  >
+                    <div className="text-3xl font-bold text-gray-200 text-shadow">
+                      Services
+                    </div>
+                  </button>
                   <ModalForContact className="text-3xl font-bold text-gray-200 text-shadow" />
-                </div>
-                <SocialLink
-                  image={linkedinIcon}
-                  link="https://www.linkedin.com/in/bricekaszluk?original_referer="
-                />
+                  <SocialLink
+                    image={linkedinIcon}
+                    link="https://www.linkedin.com/in/bricekaszluk?original_referer="
+                    className="rounded-md bg-white"
+                  />
               </div>
             </div>
           </nav>
