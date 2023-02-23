@@ -15,8 +15,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Création de sites web évolutifs pour les particuliers et les
-          entreprises
+          Création de sites web évolutifs et référencés
         </title>
         <meta
           name="image"

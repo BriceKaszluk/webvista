@@ -38,7 +38,7 @@ export default function Document() {
         content="Faites confiance à un développeur freelance expérimenté pour créer un site web professionnel qui répond à vos besoins. Contactez-moi dès maintenant."
       />
       <meta property="og:site_name" content="WebVista" />
-
+      <link rel="shortcut icon" href="/favicon.webp" />
       <Head />
       <body>
         <Main />

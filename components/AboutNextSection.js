@@ -60,6 +60,7 @@ function AboutNextSection() {
             className="mt-11 md:mt-8 md:mb-4 bg-blue-500 hover:bg-blue-600 text-gray-200 font-bold py-2 px-4 rounded w-fit"
             href="https://kinsta.com/fr/base-de-connaissances/next-js/#questce-que-nextjs-"
             target="_blank"
+            rel="noopener noreferrer"
           >
             EN APPRENDRE PLUS
           </a>
