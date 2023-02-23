@@ -2,7 +2,7 @@
 
 const nextConfig = {
   images: {
-    domains: ['cdn.pixabay.com'],
+    domains: ['cdn.pixabay.com', 'cdn-icons-png.flaticon.com'],
 },
   reactStrictMode: true,
   async headers() {

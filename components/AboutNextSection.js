@@ -14,7 +14,7 @@ function AboutNextSection() {
             height={450}
           />
         </div>
-        <div className="mt-11 md:mt-0 lg:w-1/2 lg:pr-16  flex flex-col justify-evenly md:justify-between items-center md:items-start h-5/6">
+        <div className="mt-11 md:mt-0 lg:w-1/2   flex flex-col justify-evenly md:justify-between items-center md:items-start h-5/6">
           <h2 className="text-3xl font-bold text-gray-200 text-shadow mb-5">
             Un site web durable et évolutif grâce à Next.js
           </h2>
@@ -57,7 +57,7 @@ function AboutNextSection() {
             </p>
           </div>
           <a
-            className="mt-11 md:mt-8 md:mb-0 bg-blue-500 hover:bg-blue-600 text-gray-200 font-bold py-2 px-4 rounded w-fit"
+            className="mt-11 md:mt-8 md:mb-4 bg-blue-500 hover:bg-blue-600 text-gray-200 font-bold py-2 px-4 rounded w-fit"
             href="https://kinsta.com/fr/base-de-connaissances/next-js/#questce-que-nextjs-"
             target="_blank"
           >
