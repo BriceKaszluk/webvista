@@ -28,16 +28,20 @@ function Navbar() {
           onClick={() => {
             scrollToElement("hero");
           }}
-          className="text-gray-800 text-4xl font-bold cursor-pointer flex items-end"
+          className="text-gray-800 text-4xl font-bold cursor-pointer flex flex-col justify-content items-end"
         >
-          <Image
-            className="mr-4"
+        <span>WebVista</span>  
+        <div className="flex text-xs w-full justify-end items-center">
+        <Image
+            className="mr-2"
             src={frenchFlag}
             alt="french tricolor country"
-            width={36}
-            height={36}
+            width={20}
+            height={20}
           />
-          WebVista
+          <span>made in France</span>
+        </div>
+
         </div>
         <div className="flex space-x-4 hidden sm:flex sm:items-end">
           <button
