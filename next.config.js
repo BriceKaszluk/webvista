@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  images: {
+    domains: ['cdn.pixabay.com'],
+},
   reactStrictMode: true,
   async headers() {
     return [

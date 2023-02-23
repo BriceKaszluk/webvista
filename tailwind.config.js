@@ -15,6 +15,9 @@ module.exports = {
       backgroundImage: {
         'main': "url('../public/assets/main-background.webp')",
         'myPicture': "url('../public/assets/brice-photo.webp')",
+        'siteShowCase': "url('https://cdn.pixabay.com/photo/2018/04/30/08/20/business-3362103__340.png')",
+        'siteShop': "url('https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603__340.jpg')",
+        'siteOthers': "url('https://cdn.pixabay.com/photo/2018/03/17/10/51/post-it-notes-3233653__340.jpg')",
       },
       colors: {
         'section': '#002D62',

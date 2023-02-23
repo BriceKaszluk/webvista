@@ -5,12 +5,12 @@ import linkedinIcon from "../public/assets/linkedin.webp";
 
 function AboutSection() {
   return (
-    <div id="about" className="w-full bg-section border-t border-b border-gray-200 py-11">
-      <div className="max-w-7xl mx-auto md:mt-16 flex flex-col lg:flex-row items-center justify-center px-4 md:h-screen">
+    <div id="about" className="w-full bg-section py-11">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center px-4 md:h-screen/2">
         <div className="lg:w-1/2 lg:pr-16 h-2/3 flex flex-col justify-center items-center md:items-start h-5/6">
           <div className="lg:w-1/2 w-2/3 md:mb-0 flex items-center justify-center md:hidden">
             <Image
-              className="rounded-full shadow-sm shadow-white md:h-full shadow-lg"
+              className="rounded-full shadow-sm shadow-white md:h-full shadow-sm"
               src={myPicture}
               alt="Picture of the author"
               width={400}
@@ -23,8 +23,6 @@ function AboutSection() {
           </h2>
           <SocialLink image={linkedinIcon} link="https://www.linkedin.com/in/bricekaszluk?original_referer=" className="bg-white rounded-md ml-8 w-11 h-11 mr-11" />
           </div>
-
-
           <div>
             <p className="text-lg text-gray-200">
               Je suis un développeur web passionné et expérimenté, spécialisé en{" "}

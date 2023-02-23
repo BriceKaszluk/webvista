@@ -7,8 +7,9 @@ import { FaCheck } from "react-icons/fa";
 import BackgroundLayer from "./ModalComponents/BackgroundLayer";
 import FadeIn from "./ModalComponents/FadeIn";
 import SlideOverLayer from "./ModalComponents/SlideOverLayer";
+import { twMerge } from "tailwind-merge";
 
-function ModalForQuote({ title }) {
+function ModalForQuote({ title, className }) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
@@ -105,7 +106,9 @@ function ModalForQuote({ title }) {
 
   return (
     <div>
-      <div className="mx-auto flex max-w-md justify-start">
+      <div
+        className={twMerge("flex max-w-md justify-start", className)}
+      >
         <ButtonCta onClick={() => setShow(!show)}>{title}</ButtonCta>
       </div>
       <Transition.Root show={show}>
@@ -126,7 +129,8 @@ function ModalForQuote({ title }) {
             Travaillons ensemble sur votre projet web
           </h2>
           <p className="text-lg text-gray-200 mb-6 text-left">
-            Remplissez le formulaire ci-dessous, je vous recontacterai rapidement pour discuter de votre projet.
+            Remplissez le formulaire ci-dessous, je vous recontacterai
+            rapidement pour discuter de votre projet.
           </p>
           <div className="space-y-4">
             <form className="mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -334,7 +338,9 @@ function ModalForQuote({ title }) {
             {submitted ? (
               <div className="flex items-center justify-center">
                 <FaCheck className="text-green-500 animate-pulse mr-2" />
-                <p className="text-gray-200">Votre demande a été envoyé avec succès !</p>
+                <p className="text-gray-200">
+                  Votre demande a été envoyé avec succès !
+                </p>
               </div>
             ) : (
               <FadeIn delay="delay-[700ms]">

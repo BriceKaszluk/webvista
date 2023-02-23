@@ -66,7 +66,7 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:flex md:flex-row-reverse md:justify-between  "
+              className="bg-white p-4 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 md:flex md:flex-row-reverse md:justify-between  "
             >
               <div className="relative h-fit mb-4 z-10 md:w-1/2 md:flex md:justify-around md:flex-col md:h-full md:ml-11">
                 <Image
@@ -74,14 +74,14 @@ const Portfolio = () => {
                   alt={project.title}
                   width={558}
                   height={270}
-                  className="rounded-lg shadow-lg"
+                  className="rounded-lg shadow-sm"
                 />
                 <Image
                   src={project.secondImage}
                   alt={project.title}
                   width={558}
                   height={270}
-                  className="rounded-lg shadow-lg hidden md:block"
+                  className="rounded-lg shadow-sm hidden md:block"
                 />
               </div>
               <div className="md:w-1/2">

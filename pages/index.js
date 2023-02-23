@@ -7,8 +7,8 @@ import NextJsBenefitsSection from "../components/NextJsBenefitsSection";
 import AboutSection from "../components/AboutSection";
 import AboutNextSection from "../components/AboutNextSection";
 import Services from "../components/Services";
-import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
+import SiteTypes from "../components/SiteTypes";
 
 export default function Home() {
   return (
@@ -38,8 +38,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <ShowCaseBenefitsSection />
+        <SiteTypes />
         <AboutSection />
-        <Portfolio />
         <AboutNextSection />
         <NextJsBenefitsSection />
         <Services />

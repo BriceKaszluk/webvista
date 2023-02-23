@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <section id="services" className="bg-section py-11 px-4 w-full md:h-screen border-t border-gray-200 md:flex md:items-center md:items-center">
+    <section id="services" className="bg-section py-11 px-4 w-full md:h-screen md:flex md:items-center md:items-center">
       <div className="md:flex md:justify-center md:items-center md:items-center">
         <div className="md:w-2/4 md:flex md:justify-center md:items-center">
           <Image
-            className="rounded-full shadow-sm shadow-white md:h-full shadow-lg"
+            className="rounded-full shadow-sm shadow-white md:h-full shadow-sm"
             src={working}
             alt="working on desktop"
             width={800}
@@ -30,7 +30,7 @@ const Services = () => {
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
                 Un site web vitrine sur mesure à un tarif abordable,
-                généralement compris entre 500€ et 2000.
+                généralement compris entre 500€ (site monopage) et 2000€ (authentification, paiement etc) .
               </p>
             </li>
             <li className="flex items-center mb-2">
@@ -50,7 +50,7 @@ const Services = () => {
             <li className="flex items-center mb-2">
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
-                <strong>Certificat SSL gratuit</strong>, pour assurer la
+                <strong>Certificat SSL gratuit</strong>, obligatoire pour assurer la
                 sécurité de votre site.
               </p>
             </li>
