@@ -16,7 +16,15 @@ function ModalForQuote({ className }) {
   function scrollToElement(id) {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 50;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   }
 
@@ -50,14 +58,14 @@ function ModalForQuote({ className }) {
           />
           <nav className="flex justify-center mt-11 h-screen/2">
             <div className="flex flex-col justify-between w-8/12 ">
-              <div className="text-gray-200 flex flex-col items-center justify-between h-screen/3 w-full space-x-4">
+              <div className="text-gray-200 flex flex-col items-start justify-between h-screen/3 w-full ">
                   <button
                     onClick={() => {
                       setShowModal(!showModal);
                       scrollToElement("about");
                     }}
                   >
-                    <div className="text-3xl font-bold text-gray-200 text-shadow">
+                    <div className="text-2xl font-bold text-gray-200 text-shadow">
                       À propos
                     </div>
                   </button>
@@ -67,7 +75,7 @@ function ModalForQuote({ className }) {
                       scrollToElement("projects");
                     }}
                   >
-                    <div className="text-3xl font-bold text-gray-200 text-shadow">
+                    <div className="text-2xl font-bold text-gray-200 text-shadow">
                       Projets
                     </div>
                   </button>
@@ -77,11 +85,11 @@ function ModalForQuote({ className }) {
                       scrollToElement("services");
                     }}
                   >
-                    <div className="text-3xl font-bold text-gray-200 text-shadow">
+                    <div className="text-2xl font-bold text-gray-200 text-shadow">
                       Services
                     </div>
                   </button>
-                  <ModalForContact className="text-3xl font-bold text-gray-200 hover:text-gray-100 text-shadow" />
+                  <ModalForContact className="text-2xl font-bold text-gray-200 hover:text-gray-100 text-shadow" />
                   <SocialLink
                     image={linkedinIcon}
                     link="https://www.linkedin.com/in/bricekaszluk?original_referer="
