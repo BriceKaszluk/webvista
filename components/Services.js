@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <section id="services" className="bg-section py-11 px-4 w-full md:h-screen md:flex md:items-center md:items-center">
+    <section id="services" className="bg-section pb-11 px-4 w-full md:h-screen md:flex md:items-center md:items-center">
       <div className="md:flex md:justify-center md:items-center md:items-center">
         <div className="md:w-2/4 md:flex md:justify-center md:items-center">
           <Image

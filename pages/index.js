@@ -38,9 +38,10 @@ export default function Home() {
         <Hero />
         <ShowCaseBenefitsSection />
         <SiteTypes />
-        <AboutSection />
         <AboutNextSection />
         <NextJsBenefitsSection />
+        <AboutSection />
+
         <Services />
         <Footer />
       </main>
