@@ -67,14 +67,14 @@ const SiteTypes = () => {
   };
 
   return (
-    <section id="projects" className="py-11 bg-gray-100 bg-section w-full flex flex-col justify-center items-center">
-      <div className="max-w-7xl md:w-full mx-auto px-4 sm:px-6 lg:px-8 h-fit">
+    <section id="projects" className="pt-11 md:py-11 bg-gray-100 bg-section w-full flex flex-col justify-center items-center">
+      <div className="max-w-7xl md:w-full mx-auto sm:px-6 lg:px-8 h-fit">
         <h2 className="text-3xl font-bold text-gray-200 text-shadow text-center md:text-left mb-11">
           Le site que je peux créer pour vous :
         </h2>
         <div className="mt-6">
           <div className="border-b border-gray-200">
-            <nav className="-mb-px flex space-x-8" aria-label="Tabs">
+            <div className="-mb-px flex md:space-x-8 space-x-4 justify-center md:justify-start" aria-label="Tabs">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -92,7 +92,7 @@ const SiteTypes = () => {
                   {tab.label}
                 </button>
               ))}
-            </nav>
+            </div>
           </div>
           {tabs.map((tab) => (
             <motion.div
