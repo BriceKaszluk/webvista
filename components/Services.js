@@ -18,26 +18,26 @@ const Services = () => {
         </div>
         <div className="container mx-auto md:ml-16 md:mr-0 flex flex-col items-center md:items-start md:w-2/4">
           <h2 className="text-3xl text-gray-200 font-bold mb-6 mt-11 md:mt-0 text-left">
-            Créons votre site web vitrine ensemble
+            Créons votre site web ensemble
           </h2>
           <p className="text-lg text-gray-200 mb-6 text-left">
-            Je vous propose un site vitrine professionnel et efficace, conçus
+            Je vous propose un site professionnel et efficace, conçus
             pour vous aider à vous faire connaître en ligne. Mon service
             comprend :
           </p>
           <ul className="text-gray-200 text-lg mb-6 text-left md:w-4/5">
-            <li className="flex items-center mb-2">
+          <li className="flex items-center mb-2">
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
-                Une évolution de votre site web dans le temps en fonction de vos besoins.
+                {" "}
+                Un site web conçu <strong>sur mesure</strong> pour
+                répondre à vos besoins.
               </p>
             </li>
             <li className="flex items-center mb-2">
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
-                {" "}
-                Un site web conçu sur mesure pour
-                répondre à vos besoins.
+                Un site qui évolue avec votre activité.
               </p>
             </li>
             <li className="flex items-center mb-2">
@@ -56,7 +56,14 @@ const Services = () => {
             <li className="flex items-center mb-2">
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
-                Un design responsive et moderne, qui s'adapte à tous les écrans.
+                {" "}
+                Optimisation pour le <strong>référencement</strong>.
+              </p>
+            </li>
+            <li className="flex items-center mb-2">
+              <FaCheck className="mr-2 text-green-500 w-10 h-10" />
+              <p className="w-5/6">
+                Un design <strong>responsive</strong> et moderne, qui s'adapte à tous les écrans.
               </p>
             </li>
           </ul>
