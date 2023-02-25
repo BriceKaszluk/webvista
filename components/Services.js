@@ -25,19 +25,18 @@ const Services = () => {
             pour vous aider à vous faire connaître en ligne. Mon service
             comprend :
           </p>
-          <ul className="text-gray-200 text-lg mb-6 text-left">
+          <ul className="text-gray-200 text-lg mb-6 text-left md:w-4/5">
             <li className="flex items-center mb-2">
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
-                Un site web vitrine sur mesure à un tarif abordable,
-                généralement compris entre 500€ (site monopage) et 2000€ (authentification, paiement etc) .
+                Une évolution de votre site web dans le temps en fonction de vos besoins.
               </p>
             </li>
             <li className="flex items-center mb-2">
               <FaCheck className="mr-2 text-green-500 w-10 h-10" />
               <p className="w-5/6">
                 {" "}
-                Un site web vitrine de 1 à 5 pages, conçu sur mesure pour
+                Un site web conçu sur mesure pour
                 répondre à vos besoins.
               </p>
             </li>

@@ -27,10 +27,6 @@ const SiteTypeDetails = ({ activeTabData }) => {
           </p>
           <div className="mt-4">
             <p className="text-base leading-6 font-medium text-gray-800 mb-2">
-              <span className="font-bold">Prix indicatif:</span>{" "}
-              {activeTabData.price}
-            </p>
-            <p className="text-base leading-6 font-medium text-gray-800 mb-2">
               <span className="font-bold">Temps de développement:</span>{" "}
               {activeTabData.time}
             </p>

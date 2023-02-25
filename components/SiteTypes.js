@@ -16,10 +16,8 @@ const SiteTypes = () => {
       image:
       showcasePicture,
       alt: "hand holding a tablet with a website on it",
-      price: "à partir de 500€",
       time: "2 à 5 semaines",
       features: [
-        "de 1 à 5 pages",
         "design personnalisé",
         "formulaire de contact",
         "galerie d'images",
@@ -34,7 +32,6 @@ const SiteTypes = () => {
       image:
       eCommercePicture,
       alt: "screens of a website with a creditcard between them",
-      price: "à partir de 2000€",
       time: "4 à 8 semaines",
       features: [
         "design personnalisé",
@@ -52,7 +49,6 @@ const SiteTypes = () => {
       image:
       otherPicture,
       alt: "screen of a website with post-it notes on it",
-      price: "à partir de 800€",
       time: "3 à 5 semaines",
       features: ["Selon vos besoins."],
     },
