@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { Transition } from "@headlessui/react";
 import { useState } from "react";
 import ButtonCta from "./ButtonCta";
@@ -21,6 +22,23 @@ function ModalForQuote({ className }) {
   const [fullNameError, setFullNameError] = useState(""); // Message d'erreur pour le champ Nom et Prénom
   const [emailError, setEmailError] = useState(""); // Message d'erreur pour le champ Adresse e-mail
   const [messageError, setMessageError] = useState(""); // Message d'erreur pour le champ Message
+
+  const modalRef = useRef();
+
+  useEffect(() => {
+      function handleClickOutside(event) {
+          if (modalRef.current && !modalRef.current.contains(event.target)) {
+              setShow(false);
+          }
+      }
+  
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+          // Unbind the event listener on clean up
+          document.removeEventListener("mousedown", handleClickOutside);
+      };
+  }, []);
 
   const validateForm = () => {
     let isValid = true;
@@ -83,8 +101,8 @@ function ModalForQuote({ className }) {
   };
 
   return (
-    <div className="flex justify-end items-end">
-      <div className="mx-auto flex max-w-md justify-start">
+    
+    <div>
         <div
           className={twMerge(
             "text-xl text-gray-800 hover:text-gray-700 cursor-pointer",
@@ -94,21 +112,22 @@ function ModalForQuote({ className }) {
         >
           Contact
         </div>
-      </div>
-      <Transition.Root show={show}>
-        <BackgroundLayer />
-        <SlideOverLayer>
-          <Image
-            src={cross}
-            className="cursor-pointer text-white"
-            alt="Cross icon"
-            width={32}
-            height={32}
-            onClick={() => {
-              setShow(false);
-              setSubmitted(false);
-            }}
-          />
+        <Transition.Root show={show}>
+            <BackgroundLayer />
+            <SlideOverLayer>
+                {/* Wrap modal content with referenced div */}
+                <div ref={modalRef}>
+                    <Image
+                        src={cross}
+                        className="cursor-pointer text-white"
+                        alt="Cross icon"
+                        width={32}
+                        height={32}
+                        onClick={() => {
+                            setShow(false);
+                            setSubmitted(false);
+                        }}
+                    />
           <h2 className="text-3xl text-gray-200 font-bold mb-6 mt-11 text-left">
             Contact
           </h2>
@@ -214,6 +233,7 @@ function ModalForQuote({ className }) {
                 </div>
               </FadeIn>
             )}
+          </div>
           </div>
         </SlideOverLayer>
       </Transition.Root>

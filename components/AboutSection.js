@@ -1,5 +1,5 @@
 import Image from "next/image";
-import myPicture from "../public/assets/brice-photo.webp";
+import myPicture from "../public/photo-cv-retouchée.png";
 import SocialLink from "./SocialLink";
 import linkedinIcon from "../public/assets/linkedin.webp";
 
@@ -20,7 +20,7 @@ function AboutSection() {
           </div>
           <div className="lg:w-1/2 w-2/3 mb-8 md:mb-0 flex items-center justify-center md:hidden">
             <Image
-              className="rounded-lg shadow-sm shadow-white md:h-full shadow-sm"
+              className="rounded-full shadow-white md:h-full shadow-sm"
               src={myPicture}
               alt="Picture of the author"
               width={240}
@@ -55,7 +55,7 @@ function AboutSection() {
         </div>
         <div className="lg:w-1/2 flex items-center justify-center hidden md:flex">
           <Image
-            className="rounded-lg shadow-sm shadow-white"
+            className="rounded-full shadow-sm shadow-white"
             src={myPicture}
             alt="Picture of the author"
             width={320}
